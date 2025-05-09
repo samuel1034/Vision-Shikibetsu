@@ -41,7 +41,6 @@ This demo shows how to:
 st.sidebar.write("[Github Repository] (https://github.com/samuel1034/Vision-Shikibetsu)")
 
 #File Uploader
-
 uploaded_file = st.file_uploader(
     "Choose an Image ...",
     type=["jpg","jpeg", "png"],
@@ -53,7 +52,27 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_column_width=True)
 
-#Classify the image
+    #Classify the image
+    with st.spinner("Classifying Image"):
+        try:
+            #Preprocess the image
+            inputs = processor(image=image, return_tensors="pt")
+
+            #Get predictions
+            with torch.no_grad():
+                outputs = model(**inputs)
+                logits = outputs.logits
+
+            #Get predicted class
+            predicted_class_idx = logits.argmax(-1).item()
+            predicted_label = model.config.id2label[predicted_class_idx]
+            confidence = torch.nn.functional.softmax(logits, dim=1) [0,predicted_class_idx].item()
+
+            #
+
+
+
+
 
 
 
