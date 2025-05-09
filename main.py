@@ -73,6 +73,21 @@ if uploaded_file is not None:
             st.write(f"**Predicted Label:** {predicted_label}")
             st.write(f"**Confidence score:** {confidence:.2%}")
 
+            #Show top 5 predictions
+            st.subheader("Top 5 predictions")
+            probs = torch.nn.functional.softmax(logits, dim=1) [0]
+            top5_probs, top5_indices = torch.topk(probs,5)
+
+            for i in range(5):
+                label = model.config.id2label[top5_indices[i].item()]
+                prob = top5_probs[i].item()
+                st.write(f"{i+1}. {label} ({prob:.2%})")
+
+        except Exception as e:
+            st.error(f"Error processing image: {str(e)}")
+
+        #
+
 
 
 
