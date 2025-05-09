@@ -68,7 +68,13 @@ if uploaded_file is not None:
             predicted_label = model.config.id2label[predicted_class_idx]
             confidence = torch.nn.functional.softmax(logits, dim=1) [0,predicted_class_idx].item()
 
-            #
+            #Display results
+            st.success("Classification Results")
+            st.write(f"**Predicted Label:** {predicted_label}")
+            st.write(f"**Confidence score:** {confidence:.2%}")
+
+
+
 
 
 
