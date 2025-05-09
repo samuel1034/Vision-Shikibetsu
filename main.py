@@ -42,7 +42,7 @@ st.sidebar.write("[Github Repository] (https://github.com/samuel1034/Vision-Shik
 
 #File Uploader
 
-uploaded_file = st.file.uploader(
+uploaded_file = st.file_uploader(
     "Choose an Image ...",
     type=["jpg","jpeg", "png"],
     help="Upload an image file (jpeg,png)"
@@ -52,6 +52,8 @@ if uploaded_file is not None:
     #Display the upload image
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_column_width=True)
+
+#Classify the image
 
 
 
