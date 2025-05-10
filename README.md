@@ -2,12 +2,10 @@
 **⚡ Performance-Optimized Image Classification Web App**
 
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://vision-shikibetsu-xrxpupq5xtqhj9f3eacsth.streamlit.app/)
-[![Hugging Face](https://img.shields.io/badge/🤗_Spaces-FFD21F?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/yourname/vision-classifier)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 
 <div align="center">
-  <img src="assets/demo.gif" width="75%" alt="Demo animation"/>
+  <img src="assets/Vision-Shikibetsu.gif" width="75%" alt="Demo animation"/>
 </div>
 
 ## 🌟 Features
@@ -43,7 +41,8 @@ Core Components
 🔄 State Management: Session State
 
 🌐 Deployment: Hugging Face Spaces
-📊 **Accuracy Metrics**
+
+# 📊 **Accuracy Metrics**
 
 | Dataset          | Top-1 Accuracy | Top-5 Accuracy |
 |------------------|----------------|----------------|
