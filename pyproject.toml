@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
+    "onnxruntime-gpu>=1.22.0",
+    "optimum[onnxruntime]>=1.25.3",
     "pillow>=11.2.1",
     "streamlit>=1.45.0",
     "torch>=2.7.0",
